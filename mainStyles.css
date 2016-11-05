@@ -16,6 +16,7 @@ body {
 #navBar h1{
     font-weight:300;
     font-size:31px;
+    cursor:pointer;
 }
 
 #sl1{
