@@ -1,0 +1,50 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+
+body {
+    background:#222;
+    color:#eee;
+    font-family:"Quicksand",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:300;
+}
+
+#navBar{
+    padding:8px;
+    padding-top:0;
+    margin-top:-2px;
+}
+#navBar h1{
+    font-weight:300;
+    font-size:28px;
+}
+
+#sl1{
+    background:#d53030 url('Assets/Github Artwork sl1.png') center center no-repeat;
+    background-size:56vw;
+}
+#sl2{
+    background:#859d10 url('Assets/Github Artwork sl2.png') center center no-repeat;
+    background-size:48vw;
+}
+#sl3{
+    background:#278e8e url('Assets/Github Artwork sl3.png') center center no-repeat;
+    background-size:54vw;
+}
+
+.sliderBox{
+    text-align:center;
+}
+
+.sliderBox h1{
+    font-weight:300;
+    font-size:80px;
+}
+@media(max-width:1200px){
+    .sliderBox h1{
+        font-size:64px;
+    }
+}
+@media(max-width:840px) {
+    .sliderBox h1 {
+        font-size: 48px;
+    }
+}
