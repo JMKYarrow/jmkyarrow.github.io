@@ -18,7 +18,7 @@ body {
 
 .navButton{
     margin:0;
-    font-size:18px;
+    font-size:2vh;
     padding:16px;
     width:33.33vw;
     display:inline-block;
@@ -97,21 +97,27 @@ body {
     opacity: 0.5;
 }
 
-.cell{
-    width:40vw;
+#gradesTable{
+    width:80vw;
     position:absolute;
+    height:80vh;
+    left:10vw;
+    bottom:10vh;
+}
+.cell {
+    width: 50%;
+    position: absolute;
     border: 2px solid #eee;
-    padding:8px;
-    text-align:center;
-    height:48px;
-    line-height:26px;
-    margin-top:32px;
-    font-size:20px;
+    padding: 8px;
+    text-align: center;
+    height: 10%;
+    font-size: 3vmin;
+    line-height: 5.5vh;
 }
 .col0{
-    left:10vw;
+    left:0;
 }
 .col1{
-    left:50vw;
+    left:50%;
     border-left:none;
 }
