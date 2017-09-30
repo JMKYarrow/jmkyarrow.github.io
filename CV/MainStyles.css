@@ -85,11 +85,11 @@ body {
 }
 .modalCloseButton {
     position: absolute;
-    right: 24px;
-    top: 24px;
+    right: 3vh;
+    top: 3vh;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 4vmin;
+    height: 4vmin;
     opacity:1;
     transition:opacity 0.1s;
 }
