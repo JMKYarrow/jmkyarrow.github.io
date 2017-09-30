@@ -80,7 +80,7 @@ body {
     padding: 64px;
     left: 0;
     top: -100vh;
-    transition: top 0.8s;
+    transition: top 1.2s;
     background: #1970a9;
 }
 .modalCloseButton {

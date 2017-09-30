@@ -27,7 +27,7 @@
     });
 
     $(".modalCloseButton").click(function () {
-        $("#gradesModal").css("top", "-100vh");
+        $("#gradesModal").css("top", "-200vh");
         $("body").css("overflow-y", "auto");
     });
 
