@@ -75,6 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CloseButton.png" />
     <Content Include="index.html" />
     <Content Include="MainScript.js" />
     <Content Include="MainStyles.css" />

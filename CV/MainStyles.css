@@ -72,3 +72,46 @@ body {
     overflow: hidden;
     border-radius: 16px 16px 0 0;
 }
+
+#gradesModal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 64px;
+    left: 0;
+    top: -100vh;
+    transition: top 0.8s;
+    background: #1970a9;
+}
+.modalCloseButton {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    opacity:1;
+    transition:opacity 0.1s;
+}
+.modalCloseButton:hover {
+    opacity: 0.5;
+}
+
+.cell{
+    width:40vw;
+    position:absolute;
+    border: 2px solid #eee;
+    padding:8px;
+    text-align:center;
+    height:48px;
+    line-height:26px;
+    margin-top:32px;
+    font-size:20px;
+}
+.col0{
+    left:10vw;
+}
+.col1{
+    left:50vw;
+    border-left:none;
+}

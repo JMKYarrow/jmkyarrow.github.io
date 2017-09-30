@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav id="mainNav">
-        <div class="navButton" id="navBtn0">Home</div><div class="navButton" id="navBtn1">Extras</div><div class="navButton" id="navBtn2">Gallery</div>
+        <div class="navButton" id="navBtn0">Home</div><div class="navButton" id="navBtn1">Achievements</div><div class="navButton" id="navBtn2">Gallery</div>
         <div id="navIndicator"></div>
     </nav>
     <div class="pane paneIsVisible" id="pane0">
@@ -36,10 +36,41 @@
         </div>
     </div>
     <div class="pane" id="pane1">
-        <h1>Extra Information</h1>
+        <h1>Achievements</h1>
+        <div class="row">
+             <div class="col-md-6">
+                 <h4>Qualifications</h4>
+                 <ul>
+                     <li>Passed Grade 6 Trombone</li>
+                     <li>
+                         <div>
+                             <h6 style="margin:0;">Predicted GCSE Grades: Four Grade 9's and Six Grade 8's</h6>
+                             <p id="viewGradesButton" style="color:#e74c3c;cursor:pointer;margin-top:0;margin-bottom:4px;">See Expanded View</p>
+                         </div>
+                     </li>
+                     <li>Awarded Distinction in Employability Skills</li>
+                 </ul>
+             </div>
+            <div class="col-md-6">
+                <h4>Reading List</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>References</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Previous Placements</h4>
+            </div>
+        </div>
     </div>
     <div class="pane" id="pane2">
         <h1>Photo Gallery</h1>
+    </div>
+    <div id="gradesModal">
+        <h1 style="width:100%;position:absolute;left:0;top:24px;text-align:center;font-size:24px;">Predicted GCSE Grades</h1>
+        <div id="gradesTable"></div>
+        <img src="CloseButton.png" class="modalCloseButton"/>
     </div>
 </body>
 </html>
