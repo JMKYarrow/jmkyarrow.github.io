@@ -79,7 +79,7 @@ body {
     height: 100vh;
     padding: 64px;
     left: 0;
-    top: -100vh;
+    top: -200vh;
     transition: top 1.2s;
     background: #1970a9;
 }
