@@ -78,6 +78,7 @@
     <Content Include="index.html" />
     <Content Include="MainScript.js" />
     <Content Include="MainStyles.css" />
+    <Content Include="Portrait.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
