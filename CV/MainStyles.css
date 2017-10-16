@@ -1,5 +1,5 @@
 ﻿
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
 body {
     background:#222;
@@ -62,6 +62,7 @@ body {
     background:#282828;
     padding:16px;
     border-radius:0 0 16px 16px;
+    font-weight:300;
 }
 #contactDetails h4{
     margin:4px;
