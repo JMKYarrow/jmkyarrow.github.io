@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonCurve", "DragonCurve\DragonCurve.csproj", "{6B3B221C-D99F-4BAD-AC6C-153275DC93BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B3B221C-D99F-4BAD-AC6C-153275DC93BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3B221C-D99F-4BAD-AC6C-153275DC93BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3B221C-D99F-4BAD-AC6C-153275DC93BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3B221C-D99F-4BAD-AC6C-153275DC93BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {468EA6E5-4FDB-488D-9370-169AAF33780A}
+	EndGlobalSection
+EndGlobal
