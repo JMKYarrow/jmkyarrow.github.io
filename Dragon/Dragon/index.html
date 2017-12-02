@@ -7,7 +7,12 @@
     <script src="MainScript.js"></script>
 </head>
 <body style="margin:32px;overflow-y:hidden;background:#222;">
-    <canvas id="canvas" style="background:#222;" width="4800" height="4800">
+    <div>
+        <input id="orderEntry" value="1" type="number"/>
+        <input id="goButton" class="btn" type="button" value="GO"/>
+        <input id="zoomInButton" style="float:right;" class="btn" type="button" value="+" /><input id="zoomOutButton" style="float:right" class="btn" type="button" value="-" />
+    </div>
+    <canvas id="canvas" width="1280" height="1080">
 
     </canvas>
 </body>

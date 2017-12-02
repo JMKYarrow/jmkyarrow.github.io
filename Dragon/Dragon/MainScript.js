@@ -1,9 +1,74 @@
 ﻿window.onload = function () {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = "#FF0000";
+    ctx.strokeStyle = "#00A66C";
+    ctx.lineWidth = 4;
+    var zoom = 1;
 
-    function generateDragon(n) {
+    function generateDragonRecursively(n) {
+        if (n > 0) {
+            points = generateDragonRecursively(n - 1);
+            var newPoints = [];
+            for (var j = 0; j < points.length; j++) {
+                if (j < points.length - 1) {
+                    newPoints.push(points[j]);
+                    var lengthAB = Math.sqrt(Math.pow(points[j + 1][0] - points[j][0], 2) + Math.pow(points[j + 1][1] - points[j][1], 2));
+                    var midAB = [(points[j][0] + points[j + 1][0]) / 2, (points[j][1] + points[j + 1][1]) / 2];
+                    var angleAB = Math.atan((points[j + 1][1] - points[j][1]) / (points[j + 1][0] - points[j][0]));
+                    var offsetLength = lengthAB / 2;
+
+                    if (j % 2 != 0) {
+                        offsetLength *= -1;
+                    }
+
+                    newPoints.push([midAB[0] + (Math.cos(angleAB + (Math.PI / 2)) * offsetLength), midAB[1] + (Math.sin(angleAB + (Math.PI / 2)) * offsetLength)]);
+                }
+                else {
+                    newPoints.push(points[j]);
+                }
+            }
+            return newPoints;
+        }
+        else {
+            return [[256, 256], [512*zoom, 256]];
+        }
+    }
+
+    var order = 1;
+
+    function drawDragon() {
+        order = document.getElementById("orderEntry").value;
+        var points = generateDragonRecursively(order);
+        ctx.lineWidth = 8 / (order);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.moveTo(points[0][0] , points[0][1])
+        for (var i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i][0], points[i][1]);
+        }
+        ctx.stroke();
+    }
+    
+    drawDragon();
+
+    document.getElementById("goButton").onclick = function () { drawDragon(); };
+
+    document.getElementById("zoomInButton").onclick = function () {
+        zoom *= 2;
+        drawDragon();
+    };
+
+    document.getElementById("zoomOutButton").onclick = function () {
+        zoom /= 2;
+        drawDragon();
+    };
+
+    
+    // ************************* //
+    //        LEGACY CODE        //
+    // ************************* //
+
+    /*function generateDragon(n) {
         var points = [[256, 256], [512, 256]];
         var newPoints = [];
         for (var i = 0; i < n; i++) {
@@ -54,7 +119,7 @@
                         newPoints.push([midAB[0] - offsetLength, midAB[1] + offsetLength]);
                     }
                     else
-                        newPoints.push([midAB[0], midAB[1] + offsetLength]);*/
+                        newPoints.push([midAB[0], midAB[1] + offsetLength]);
 
 
                 }
@@ -67,19 +132,6 @@
             newPoints = [];
         }
         return points;
-    }
+    }*/
 
-    function drawDragon(points, order) {
-        ctx.moveTo(points[0][0] + ((order-1) * 320) , points[0][1])
-        for (var i = 1; i < points.length; i++) {
-            ctx.lineTo(points[i][0] + ((order - 1) * 320), points[i][1]);
-        }
-        ctx.stroke();
-    }
-    
-    var order = 1;
-    setInterval(function () {
-        drawDragon(generateDragon(order),order);
-        order++;
-    },2000);
 }
