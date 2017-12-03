@@ -1,8 +1,6 @@
 ﻿window.onload = function () {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = "#00A66C";
-    ctx.lineWidth = 4;
     var zoom = 1;
 
     function generateDragonRecursively(n) {
@@ -20,7 +18,6 @@
                     if (j % 2 != 0) {
                         offsetLength *= -1;
                     }
-
                     newPoints.push([midAB[0] + (Math.cos(angleAB + (Math.PI / 2)) * offsetLength), midAB[1] + (Math.sin(angleAB + (Math.PI / 2)) * offsetLength)]);
                 }
                 else {
@@ -39,31 +36,56 @@
     function drawDragon() {
         order = document.getElementById("orderEntry").value;
         var points = generateDragonRecursively(order);
-        ctx.lineWidth = 8 / (order);
+        ctx.strokeStyle = "#00A66C";
+        ctx.lineWidth = 8 * zoom / order;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         ctx.moveTo(points[0][0] , points[0][1])
         for (var i = 1; i < points.length; i++) {
             ctx.lineTo(points[i][0], points[i][1]);
+            ctx.stroke();
         }
-        ctx.stroke();
     }
     
     drawDragon();
 
     document.getElementById("goButton").onclick = function () { drawDragon(); };
+    document.getElementById("orderEntry").onkeydown = function (ev) { if (ev.key == 'Enter') drawDragon(); };
 
     document.getElementById("zoomInButton").onclick = function () {
-        zoom *= 2;
+        zoom += 0.2;
         drawDragon();
     };
 
     document.getElementById("zoomOutButton").onclick = function () {
-        zoom /= 2;
+        if (zoom > 1) {
+            zoom -= 0.2;
+            drawDragon();
+        }
+    };
+
+    document.getElementById("nextButton").onclick = function () {
+        if (order >= 1)
+            order++;
+        else
+            order = 1;
+        document.getElementById("orderEntry").value = order;
         drawDragon();
     };
 
-    
+    document.getElementById("prevButton").onclick = function () {
+        if (order > 1) {
+            order--;
+            document.getElementById("orderEntry").value = order;
+            drawDragon();
+        }
+    };
+
+    window.onresize = function () {
+        canvas.width = window.innerWidth;
+        drawDragon();
+    }
+
     // ************************* //
     //        LEGACY CODE        //
     // ************************* //
