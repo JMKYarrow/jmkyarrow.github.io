@@ -37,7 +37,7 @@ body {
     background: #eee;
 }
 
-@media (max-width : 720) {
+@media (max-width : 1080) {
 
     #titleBlock {
         width: 90vw;
