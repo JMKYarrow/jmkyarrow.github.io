@@ -18,7 +18,10 @@
                     if (j % 2 != 0) {
                         offsetLength *= -1;
                     }
+                    
                     newPoints.push([midAB[0] + (Math.cos(angleAB + (Math.PI / 2)) * offsetLength), midAB[1] + (Math.sin(angleAB + (Math.PI / 2)) * offsetLength)]);
+                    
+                    //alert([n, j, (angleAB + (Math.PI / 2)) * 180 / Math.PI]);
                 }
                 else {
                     newPoints.push(points[j]);
@@ -31,15 +34,47 @@
         }
     }
 
+    function generateDragonByTranslation(n) {
+        if (n > 0) {
+            points = generateDragonByTranslation(n - 1);
+            var newPoints = [];
+
+            var firstCopy = points;
+            for (var i = 0; i < firstCopy.length; i++) {
+                coordinate = firstCopy[i];
+                coordinate = [(Math.cos(Math.PI / 4) * coordinate[0]) + (-Math.sin(Math.PI / 4) * coordinate[1]), (Math.sin(Math.PI / 4) * coordinate[0]) + (Math.cos(Math.PI / 4) * coordinate[1])];
+                firstCopy[i] = coordinate;
+                newPoints.push(coordinate);
+            }
+
+            var secondCopy = points;
+            for (var i = 0; i < secondCopy.length; i++) {
+                coordinate = secondCopy[i];
+                coordinate = [((Math.cos(3 * Math.PI / 4) * coordinate[0]) + (-Math.sin(3 * Math.PI / 4) * coordinate[1])) * 2, (Math.sin(3 * Math.PI / 4) * coordinate[0]) + (Math.cos(3 * Math.PI / 4) * coordinate[1])];
+                secondCopy[i] = coordinate;
+                newPoints.push(coordinate);
+            }
+
+            return newPoints;
+        }
+        else {
+            return [[0, 0], [256,0]];
+        }
+    }
+
     var order = 1;
 
     function drawDragon() {
         order = document.getElementById("orderEntry").value;
-        var points = generateDragonRecursively(order);
+        var points = generateDragonByTranslation(order);
         ctx.strokeStyle = "#00A66C";
         ctx.lineWidth = 8 * zoom / order;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
+        for (var i = 0; i < points.length; i++) {
+            points[i][0] += 256;
+            points[i][1] += 256;
+        }
         ctx.moveTo(points[0][0] , points[0][1])
         for (var i = 1; i < points.length; i++) {
             ctx.lineTo(points[i][0], points[i][1]);
