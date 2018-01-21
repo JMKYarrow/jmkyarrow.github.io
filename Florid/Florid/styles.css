@@ -1,0 +1,94 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500');
+
+body {
+    overflow: hidden;
+    background: #31aca4;
+    padding: 0;
+    margin:0;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#titleBlock {
+    width: 50vw;
+    background: #eee;
+    position: absolute;
+    left: 25vw;
+    right: 25vw;
+    top:5vw;
+}
+
+#title {
+    font-weight: 500;
+    color: #31aca4;
+    text-align: center;
+    font-size: 4.5vw;
+    background: #eee;
+}
+
+#subtitle {
+    position:relative;
+    top:-1.5vw;
+    font-weight: 500;
+    color: #31aca4;
+    text-align: center;
+    font-size: 1.5vw;
+    background: #eee;
+}
+
+@media (max-width : 1080) {
+
+    #titleBlock {
+        width: 90vw;
+        background: #eee;
+        position: absolute;
+        left: 5vw;
+        right: 5vw;
+        top: 5vw;
+    }
+
+    #title {
+        color: #31aca4;
+        text-align: center;
+        font-size: 8vw;
+        background: #eee;
+    }
+
+    #subtitle {
+        position: relative;
+        top: -2vw;
+        font-weight: 500;
+        color: #31aca4;
+        text-align: center;
+        font-size: 3vw;
+        background: #eee;
+    }
+}
+
+#poppy {
+    position:absolute;
+    right:0;
+    bottom:0;
+    opacity:0.1;
+    width:32vw;
+    max-width:400px;
+}
+
+#yarrow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.1;
+    width: 32vw;
+    max-width: 400px;
+}
+
+#copyright {
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    width:400px;
+    left:calc(50vw - 200px);
+    opacity:0.2;
+}
