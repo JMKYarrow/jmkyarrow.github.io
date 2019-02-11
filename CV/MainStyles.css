@@ -122,3 +122,9 @@ body {
     left:50%;
     border-left:none;
 }
+
+.readingList li {
+    margin: 8px;
+    padding: 8px;
+    background:#333;
+}
