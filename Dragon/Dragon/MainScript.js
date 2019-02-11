@@ -75,6 +75,12 @@
     var savedOrder;
     var savedPoints;
 
+    var grd = ctx.createLinearGradient(256,0,512,0);
+    grd.addColorStop(0, "#e74c3c");
+    grd.addColorStop(0.5, "#1abc9c");
+    grd.addColorStop(1, "#8e44ad");
+    ctx.strokeStyle = grd;
+
     function drawDragon() {
         order = document.getElementById("orderEntry").value;
 
@@ -89,15 +95,14 @@
             savedOrder = order;
         }
 
-        ctx.strokeStyle = "#00A66C";
-        ctx.lineWidth = 4 / zoom;
+        ctx.lineWidth = 16 / (zoom * order);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
-        ctx.moveTo(zoom * 128 , zoom * 128)
+        ctx.moveTo(zoom * 128, zoom * 128);
         for (var i = 1; i < points.length; i++) {
             ctx.lineTo(zoom * ((128 *  points[i][0]) + 128), zoom * ((128 *  points[i][1]) + 128));
-            ctx.stroke();
         }
+        ctx.stroke();
     }
     
     drawDragon();
