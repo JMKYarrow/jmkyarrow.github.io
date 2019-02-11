@@ -1,0 +1,26 @@
+﻿body {
+    margin: 32px;
+    overflow: hidden;
+    background: #222;
+}
+
+#canvas {
+    background: #222;
+}
+
+input {
+    padding:10px;
+    background:#181818;
+    color:#eee;
+    font-family:Montserrat;
+    font-size:30px;
+    border:none;
+}
+
+.btn{
+    cursor:pointer;
+    transition:background 0.2s;
+}
+.btn:hover {
+    background: #00A66C;
+}
