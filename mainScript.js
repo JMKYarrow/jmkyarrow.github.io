@@ -5,7 +5,7 @@
         $("body").animate({ scrollTop: "0px"},800);
     });
     $(".appBtn").click(function () {
-        $("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
+        //$("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
     });
     $(".webBtn").click(function () {
         $("body").animate({ scrollTop: $("#web").offset().top + "px" }, 800);
