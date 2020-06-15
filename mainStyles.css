@@ -10,10 +10,10 @@ body {
 
 #navBar{
     padding:9px;
-    padding-top:0;
+    padding-top:8px;
     margin-top:-2px;
 }
-#navBar h1{
+#navBar a{
     font-weight:300;
     font-size:31px;
     cursor:pointer;
