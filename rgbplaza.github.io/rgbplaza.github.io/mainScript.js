@@ -4,9 +4,12 @@
     $(".topBtn").click(function () {
         $("body").animate({ scrollTop: "0px"},800);
     });
+    
     $(".appBtn").click(function () {
-        $("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
+        //$("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
+        window.location = "https://us-central1-street-kids-direct-dms.cloudfunctions.net/transactionCompleted"
     });
+
     $(".webBtn").click(function () {
         $("body").animate({ scrollTop: $("#web").offset().top + "px" }, 800);
     });
