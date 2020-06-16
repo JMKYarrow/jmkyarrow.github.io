@@ -6,7 +6,7 @@
     });
     
     $(".appBtn").click(function () {
-        //$("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
+        $("body").animate({ scrollTop: $("#apps").offset().top + "px" }, 800);
     });
 
     $(".webBtn").click(function () {

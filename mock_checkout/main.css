@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 #jumbotron {
@@ -8,21 +9,34 @@ body{
     height: 100vh;
     overflow: hidden;
     text-align: center;
-}
-
-#stack {
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
     font-family: 'Lexend Deca' ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
-    list-style-type: none;
 }
 
 #cost {
-    height: 24;
+    height: 24px;
+    width: 500px;
+    position: absolute;
+    left: calc(50vw - 250px);
+    top: calc(50vh - 24px);
 }
 
 #confirm {
-    height: 24;
+    color: #eee;
+    width: 216px;
+    position: absolute;
+    left: calc(50vw - 108px);
+    top: calc(50vh + 12px);
+    vertical-align: middle;
+    border-radius: 32px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#confirm:hover{
+    opacity: 0.8;
+}
+
+p {
+    margin: 0;
 }
