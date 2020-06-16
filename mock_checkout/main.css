@@ -1,0 +1,28 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#jumbotron {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+#stack {
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-family: 'Lexend Deca' ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+#cost {
+    height: 24;
+}
+
+#confirm {
+    height: 24;
+}
